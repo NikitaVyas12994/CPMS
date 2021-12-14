@@ -1,0 +1,22 @@
+.filters-card {
+	padding: 30px;
+	margin-bottom: 1.5rem
+}
+
+.filters-card .checkboxes-list {
+	margin: 0;
+	padding: 20px 0 0 0
+}
+
+.filters-card .checkboxes-list .field>h5 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	font-size: .8rem;
+	text-transform: uppercase;
+	color: #283252;
+	padding-bottom: 6px
+}
+
+.filters-card .checkboxes-list .checkbox {
+	padding: 8px 0
+}

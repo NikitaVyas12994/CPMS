@@ -1,0 +1,47 @@
+.widget-card .radial-wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 85%
+}
+
+ .widget-card .radial-wrap .radial-stats {
+	margin-top: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding-top: 20px;
+	border-top: 1px solid #e5e5e5
+}
+
+ .widget-card .radial-wrap .radial-stats .radial-stat {
+	width: 50%;
+	text-align: center
+}
+
+ .widget-card .radial-wrap .radial-stats .radial-stat:first-child {
+	border-right: 1px solid #e5e5e5
+}
+
+ .widget-card .radial-wrap .radial-stats .radial-stat span {
+	display: block
+}
+
+ .widget-card .radial-wrap .radial-stats .radial-stat span:first-child {
+	color: #a2a5b9;
+	font-size: .9rem
+}
+
+ .widget-card .radial-wrap .radial-stats .radial-stat span:nth-child(2) {
+	color: #283252;
+	font-size: 1.3rem;
+	font-weight: 600
+}
+
+.full-height {
+	height : 100%
+}

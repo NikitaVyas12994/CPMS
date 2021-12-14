@@ -1,0 +1,30 @@
+.widget-card .revenue-chart {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 10px
+}
+
+.widget-card .revenue-chart .revenue-stat {
+	margin-right: 30px;
+	font-family: "Roboto", sans-serif
+}
+
+.widget-card .revenue-chart .revenue-stat span {
+	display: block
+}
+
+.widget-card .revenue-chart .revenue-stat span:first-child {
+	color: #a2a5b9;
+	font-size: .9rem
+}
+
+.widget-card .revenue-chart .revenue-stat span:nth-child(2) {
+	color: #283252;
+	font-size: 1.2rem;
+	font-weight: 600
+}
+
+.widget-card .revenue-chart .revenue-stat span.current {
+	color: #797bf2
+}

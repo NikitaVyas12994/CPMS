@@ -1,0 +1,24 @@
+.revenue-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.revenue-stats .revenue-stat {
+  margin-right: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.revenue-stats .revenue-stat span:first-child {
+  color: #a2a5b9;
+  font-size: 0.9rem;
+}
+.revenue-stats .revenue-stat span.current {
+  color: #797bf2;
+}
+.revenue-stats .revenue-stat span:nth-child(2) {
+  /* color: #283252; */
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.revenue-stats .revenue-stat span {
+  display: block;
+}

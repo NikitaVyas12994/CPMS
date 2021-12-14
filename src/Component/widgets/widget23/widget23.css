@@ -1,0 +1,36 @@
+.tabbed-controls .tabbed-control {
+	position: relative;
+	width: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: .9rem;
+	color: #a2a5b9;
+	z-index: 1
+}
+
+.tabbed-controls .tabbed-control.is-active {
+	color: #fcfcfc
+}
+
+.tabbed-controls .tabbed-control.is-active:first-child~.tabbed-naver {
+	margin-left: 0
+}
+
+.tabbed-controls .tabbed-control.is-active:nth-child(2)~.tabbed-naver {
+	margin-left: 50%
+}
+
+body.is-dark .tabbed-controls {
+	background: #2a2a2e
+}
+
+body.is-dark .tabbed-controls .tabbed-naver {
+	background: #797bf2
+}

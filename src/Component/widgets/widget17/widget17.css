@@ -1,0 +1,28 @@
+.chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.range-warper-style{
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    width: 145px;
+    margin-top: -15px 
+}
+
+.card-height{
+    height: 100%;
+}
+
+.card-warper{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bold-font .apexcharts-datalabels-group .apexcharts-text {
+	font-weight: 400 !important
+}

@@ -1,0 +1,32 @@
+.widget-card .chart-group {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex
+}
+
+.widget-card .chart-group .group {
+	text-align: center;
+	width: 33.3%
+}
+
+.widget-card .chart-group .group .chart-container {
+	margin-top: -5px
+}
+
+.widget-card .chart-group .group span {
+	display: block;
+	margin-top: -25px;
+	font-family: "Roboto", sans-serif;
+	color: #283252;
+	font-weight: 600;
+	font-size: 1.2rem
+}
+
+.widget-card .chart-group .group p {
+	font-size: .9rem
+}
+
+.description-text {
+    margin-top:  15px;
+}
+

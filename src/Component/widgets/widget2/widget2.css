@@ -1,0 +1,10 @@
+.quick-stats
+  .quick-stats-inner
+  .quick-stat
+  .media-flex-center
+  .flex-meta
+  span:first-child {
+  /* font-size: 1.4rem; */
+  font-weight: 600;
+  color: #283252;
+}

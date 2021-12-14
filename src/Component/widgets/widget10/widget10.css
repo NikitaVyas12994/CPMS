@@ -1,0 +1,57 @@
+
+.progress-block {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: calc(100% - 44px);
+	font-family: "Roboto", sans-serif
+}
+
+.progress-block .progress-foot span:nth-child(2) {
+    color: #a2a5b9;
+    font-size: .9rem;
+}
+
+.progress-block .progress {
+    margin-bottom: 8px;
+}
+
+.progress-block .value {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.progress-block .value span {
+	color: #283252
+}
+
+.progress-block .progress-foot span:first-child {
+	font-weight: 500
+}
+
+.progress-block {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 90%;
+	font-family: "Roboto", sans-serif
+}
+
+.progress-block .circle-chart-wrapper {
+	margin-top: auto
+}
+
+.progress-foot span:first-child svg {
+    height: 16px;
+    width: 16px;
+    margin-right: 6px;
+    stroke-width: 3px;
+}

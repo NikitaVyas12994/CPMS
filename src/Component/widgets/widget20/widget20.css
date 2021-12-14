@@ -1,0 +1,171 @@
+ .widget-card.is-card-panel.is-grey {
+	background: #f5f6fa;
+	border: none
+}
+
+.widget-card.is-card-panel .columns .column:first-child .inner-box {
+	border-right: 1px solid #e5e5e5
+}
+
+ .widget-card.is-card-panel .inner-box {
+	position: relative;
+	margin: 20px;
+	height: calc(100% - 40px)
+}
+
+.widget-card.is-card-panel .inner-box .box-title {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin-bottom: 20px
+}
+
+.widget-card.is-card-panel .inner-box .box-title .h-select .select-box {
+	border-color: transparent
+}
+
+.widget-card.is-card-panel .inner-box .monthly-summary-wrap .monthly-summary {
+	padding: 0 20px;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px
+}
+
+.inner-box .monthly-summary-wrap .monthly-summary .monthly-summary-item {
+	padding: 20px 0;
+	font-family: "Roboto", sans-serif
+}
+
+.inner-box .monthly-summary-wrap .monthly-summary .monthly-summary-item:first-child {
+	border-bottom: 1px solid #e0e0e0
+}
+
+.inner-box .monthly-summary-wrap .monthly-summary .monthly-summary-item span {
+	display: block
+}
+
+.inner-box .monthly-summary-wrap .monthly-summary .monthly-summary-item span:first-child {
+	font-size: .85rem;
+	font-weight: 500;
+	color: #a2a5b9
+}
+
+.inner-box .monthly-summary-wrap .monthly-summary .monthly-summary-item span:nth-child(2) {
+	font-weight: 500
+}
+
+.inner-box .monthly-summary-wrap .monthly-summary .monthly-summary-item span:nth-child(2).is-income {
+	color: #93e088
+}
+
+.inner-box .monthly-summary-wrap .monthly-summary .monthly-summary-item span:nth-child(2).is-expense {
+	color: #f92b60
+}
+.inner-box .chart-wrapper {
+	position: relative;
+	padding-right: 30px
+}
+.inner-box .chart-wrapper .action-link {
+	position: absolute;
+	top: -42px;
+	right: 45px
+}
+.inner-box .transactions {
+	padding: 10px 0
+}
+.inner-box .transactions .media-flex-center .flex-meta span:nth-child(2) {
+	font-size: .85rem
+}
+.inner-box .transactions .media-flex-center .flex-end {
+	font-family: "Roboto", sans-serif;
+	font-size: 1rem;
+	font-weight: 500;
+	color: #283252
+}
+.inner-box .button-wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 20px 0 0 0
+}
+.inner-box .button-wrap .button {
+	max-width: 49%
+}
+
+body.is-dark .widget-card.is-card-panel {
+	background: #323236
+}
+
+body.is-dark .widget-card.is-card-panel .inner-box {
+	border-color: #404046 !important
+}
+
+body.is-dark .widget-card.is-card-panel .inner-box .box-title h3 {
+	color: #aaaab3
+}
+
+body.is-dark .widget-card.is-card-panel .inner-box .monthly-summary-wrap .monthly-summary {
+	border-color: #404046;
+	background: #2d2d31
+}
+
+body.is-dark .widget-card.is-card-panel .inner-box .monthly-summary-wrap .monthly-summary .monthly-summary-item {
+	border-color: #404046
+}
+
+.widget-card.is-card-panel .inner-box .box-title h3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #283252
+}
+
+#timeline-chart{
+    height: 100%;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 767px) {
+	.widget-card.is-card-panel {
+		overflow: hidden;
+		padding: 10px
+	}
+	.widget-card.is-card-panel .inner-box {
+		border-right: none !important
+	}
+	.widget-card.is-card-panel .inner-box .monthly-summary-wrap {
+		margin-bottom: 60px
+	}
+	.widget-card.is-card-panel .inner-box .chart-wrapper {
+		padding-right: 0
+	}
+	.widget-card.is-card-panel .inner-box .chart-wrapper .action-link {
+		top: -45px;
+		right: 0px
+	}
+}
+
+@media only screen and (min-width: 768px)and (max-width: 1024px)and (orientation: portrait) {
+	.widget-card.is-card-panel .inner-box {
+		border-right: none !important
+	}
+	.widget-card.is-card-panel .inner-box .monthly-summary-wrap {
+		margin-bottom: 60px
+	}
+	.widget-card.is-card-panel .inner-box .chart-wrapper {
+		padding-right: 0
+	}
+	.widget-card.is-card-panel .inner-box .chart-wrapper .action-link {
+		top: -45px;
+		right: 0px
+	}
+}

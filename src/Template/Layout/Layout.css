@@ -1,0 +1,328 @@
+.dashboard-card, 
+.dashboard-tile,
+.widget-card,
+.widget-tile {
+    -webkit-box-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: inline-block;
+	width: 100%;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 6px;
+	border: 1px solid #e5e5e5;
+	-webkit-transition: all .3s;
+	transition: all .3s
+}
+
+.has-margin-bottom.dashboard-card,
+.has-margin-bottom.dashboard-tile,
+.has-margin-bottom.widget-card,
+.has-margin-bottom.widget-tile {
+    margin-bottom: 1.5rem
+}
+
+.is-flat.dashboard-card,
+.is-flat.dashboard-tile,
+.is-flat.widget-card,
+.is-flat.widget-tile {
+  -webkit-box-shadow: none;
+	box-shadow: none
+}
+
+.is-raised.dashboard-card,
+.is-raised.dashboard-tile,
+.is-raised.widget-card,
+.is-raised.widget-tile {
+    -webkit-box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, .06);
+	box-shadow: -1px 3px 10px 0 rgba(0, 0, 0, .06)
+}
+
+.is-primary.dashboard-card,
+.is-primary.dashboard-tile,
+.is-primary.widget-card,
+.is-primary.widget-tile {
+  background: #671cc9;
+	border-color: #671cc9
+
+}
+
+.is-primary.dashboard-card .title,
+.is-primary.dashboard-tile,
+.is-success.dashboard-tile,
+.is-warning.dashboard-tile,
+.is-danger.dashboard-tile,
+.is-danger.widget-tile,
+.is-primary.widget-card .title,
+.is-primary.widget-tile,
+.is-success.widget-tile,
+.is-warning.widget-tile {
+    color: #fcfcfc !important
+}
+
+.is-info.dashboard-tile,
+.is-info.widget-tile {
+	background: #039be5 !important;
+	border-color: #039be5 !important
+}
+
+
+.dashboard-card .card-head,
+.dashboard-tile .tile-head,
+.widget-card .card-head,
+.widget-tile .tile-head {
+    display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+  margin-bottom: 20px; 
+}
+
+.active-list{
+	margin-top: 20px
+}
+
+.dashboard-card .card-head .left,
+.dashboard-tile .card-head .left,
+.widget-card .card-head .left,
+.widget-tile .card-head .left {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.dashboard-card .card-head .left .title ,
+.dashboard-tile .card-head .left .title,
+.widget-card .card-head .left .title,
+.widget-tile .card-head .left .title {
+    font-size: 1.2rem;
+	font-weight: 500
+}
+
+.dashboard-card .card-head .right,
+.dashboard-tile .card-head .right,
+.widget-card .card-head .right,
+.widget-tile .card-head .right {
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end
+}
+
+
+.dashboard-card .card-inner,
+.dashboard-tile .card-inner,
+.widget-card .card-inner,
+.widget-tile .card-inner {
+    padding-top: 1.75rem
+}
+
+body.is-dark .dashboard-card,
+body.is-dark .dashboard-tile,
+body.is-dark .widget-card,
+body.is-dark .widget-tile {
+  background: #323236;
+	border-color: #404046
+}
+
+body.is-dark .is-primary.dashboard-card,
+body.is-dark .is-primary.dashboard-tile,
+body.is-dark .is-primary.widget-card,
+body.is-dark .is-primary.widget-tile {
+    background: #797bf2;
+	border-color: #797bf2
+}
+
+body.is-dark .dashboard-card .h-avatar img,
+body.is-dark .dashboard-tile .h-avatar img,
+body.is-dark .widget-card .h-avatar img,
+body.is-dark .widget-tile .h-avatar img {
+    border-color: #323236 !important
+}
+
+body.is-dark  .dashboard-card .avatar-stack .h-avatar,
+body.is-dark  .dashboard-tile .avatar-stack .h-avatar,
+body.is-dark  .widget-card .avatar-stack .h-avatar,
+body.is-dark  .widget-tile .avatar-stack .h-avatar{
+ border-color: #323236 !important
+}
+
+body.is-dark .dashboard-card .avatar-stack .h-avatar .avatar.is-more .inner,
+body.is-dark .dashboard-tile .avatar-stack .h-avatar .avatar.is-more .inner,
+body.is-dark .widget-card .avatar-stack .h-avatar .avatar.is-more .inner,
+body.is-dark .widget-tile .avatar-stack .h-avatar .avatar.is-more .inner{
+    border-color: #323236 !important
+}
+
+.dashboard-card > h4,
+.dashboard-card .apexcharts-title-text,
+.widget-card > h4,
+.widget-card .apexcharts-title-text{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #283252;
+  margin-bottom: 12px;
+}
+
+.dashboard-card.is-upgrade,
+.widget-card.is-upgrade {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #7b2ce2;
+  border-color: #7b2ce2;
+  padding: 20px 40px;
+  min-height: 320px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 14px 26px -12px rgba(103, 28, 201, 0.42),
+    0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(103, 28, 201, 0.2);
+  box-shadow: 0 14px 26px -12px rgba(103, 28, 201, 0.42),
+    0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(103, 28, 201, 0.2);
+}
+
+.dashboard-card.is-upgrade .lnil,
+.dashboard-card.is-upgrade .lnir,
+.widget-card.is-upgrade .lnil,
+.widget-card.is-upgrade .lnir{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 4rem;
+  opacity: 0.3;
+}
+
+.dashboard-card.is-upgrade .cta-content,
+.widget-card .cta-content {
+  text-align: center;
+}
+
+.dashboard-card.is-upgrade .cta-content h4 ,
+.widget-card.is-upgrade .cta-content h4{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fcfcfc;
+  margin-bottom: 8px;
+}
+
+.dashboard-card.is-upgrade .link,
+.widget-card.is-upgrade .link  {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.dashboard-card.is-upgrade .link:hover,
+.widget-card.is-upgrade .link:hover {
+  color: #fcfcfc;
+  opacity: 0.6;
+}
+
+.dashboard-card.is-gauge,
+.widget-card.is-gauge {
+  position: relative;
+}
+
+.dashboard-card.is-gauge .people,
+.widget-card.is-gauge .people {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+body.is-dark .dashboard-card.is-upgrade,
+body.is-dark .widget-card.is-upgrade
+ {
+  background: #797bf2;
+  border-color: #797bf2;
+  -webkit-box-shadow: 0 14px 26px -12px rgba(121, 123, 242, 0.42),
+    0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(121, 123, 242, 0.2);
+  box-shadow: 0 14px 26px -12px rgba(121, 123, 242, 0.42),
+    0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(121, 123, 242, 0.2);
+}
+
+.dashboard-card.is-gauge .people .h-avatar,
+.widget-card.is-gauge .people .h-avatar {
+  margin: 0 4px;
+}
+
+.widget-padding {
+  padding: 30px;
+}
+
+.dashboard-card .card-head h3,
+.widget-card .card-head h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #283252;
+  margin-bottom: 0;
+}
+
+.dashboard-tile .tile-body,
+.widget-tile .tile-body {
+	font-size: 2rem;
+	padding: 4px 0 8px 0
+}
+
+.dashboard-tile .tile-body span,
+.widget-tile .tile-body span{
+	color: #283252;
+	font-weight: 600
+}
+
+.dashboard-tile .tile-foot span:first-child,
+.widget-tile .tile-footer span:first-child {
+	font-weight: 500
+}
+
+.dashboard-tile .tile-foot span:first-child svg,
+.widget-tile .tile-footer span:first-child svg {
+	height: 16px;
+	width: 16px;
+	margin-right: 9px;
+	stroke-width: 3px
+}
+
+.dashboard-tile .tile-foot span:nth-child(2),
+.widget-tile .tile-footer span:nth-child(2) {
+	color: #a2a5b9;
+	font-size: .9rem
+}
+
+body.is-dark .dashboard-tile,
+body.is-dark .widget-tile {
+	border-color: #323236 !important
+}
+
+.dashboard-tile .tile-head h3,
+.widget-tile .tile-head h3  {
+	font-family: "Montserrat", sans-serif;
+	color: #283252;
+	font-weight: 600
+}
