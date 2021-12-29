@@ -67,7 +67,7 @@ function MobileSideMenu(props: IMobileSideMenu) {
                     </li>
                     <li>
                         <NavLink
-                            to="/Dashboard"
+                            to="/Graphs"
                             className={({ isActive }) =>
                                 [
 

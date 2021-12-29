@@ -166,5 +166,5 @@ export interface IWidget30Data {
 
 export interface IWidget31Data {
     name: string,
-    data: number[],
+    data: (number[] | number[][]),
 }

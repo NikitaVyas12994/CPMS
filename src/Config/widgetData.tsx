@@ -36,11 +36,11 @@ export const widget30ChartData: widgetInterface.IWidget30Data[] = [
 
 export const widget31ChartData: widgetInterface.IWidget31Data[] = [{
     name: "Session Duration",
-    data: [45, 52, 38, 24, 33, 26]
+    data: [[40, 45, 50], [50, 52, 54], [35, 38, 40], [23, 24, 25], [31, 33, 35], [25, 26, 27]]
 },
 {
     name: "Page Views",
-    data: [35, 41, 62, 42, 13, 18]
+    data: [[35], [41], [62], [42, 40], [13], [18]]
 },
 {
     name: 'Total Visits',

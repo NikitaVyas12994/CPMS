@@ -25,7 +25,7 @@ const Graphs = () => {
             </div>
             <div className="column is-6">
                 <Widget31 widget31ChartData={widgetData.widget31ChartData} title="Average High & Low Temperature"
-                    xaxis={['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']}
+                    xaxis={["2013-01-01", "2013-01-02", "2013-01-03", "2013-01-04", "2013-01-05", "2013-01-06"]}
                     color={[themeColors.accent, themeColors.secondary, themeColors.orange]}
                 />
             </div>
