@@ -28,7 +28,7 @@ const Widget23 = memo((props: IWidget23) => {
                 <div className="tabbed-controls">
                     {
                         Object.keys(widget23Data)?.map((keyData, index) =>
-                            <a key={index} onClick={() => setClickKey(keyData)} className={keyData == clickKey ? "tabbed-control is-active" : "tabbed-control"}>
+                            <a key={index} onClick={(e) => { setClickKey(keyData) }} className={keyData === clickKey ? "tabbed-control is-active" : "tabbed-control"}>
                                 <span>{keyData}</span>
                             </a>
                         )
@@ -38,7 +38,6 @@ const Widget23 = memo((props: IWidget23) => {
             </div>
 
             {
-
                 Object.entries(widget23Data).map(([widget22Key, widget22Value], index) =>
                     <div key={index} className={widget22Key === clickKey ? "inner-list-wrapper is-active" : 'inner-list-wrapper'}>
                         <div className="inner-list">
@@ -47,7 +46,7 @@ const Widget23 = memo((props: IWidget23) => {
                                 widget22Value?.map((widget23Item, index) =>
                                     <div key={index} className="inner-list-item media-flex-center">
                                         <div onClick={() => onClickItem(index)}
-                                            className={widget23Item.isChecked == undefined ? "animated-checkbox" : widget23Item.isChecked ? "animated-checkbox is-checked" : "animated-checkbox is-unchecked"}>
+                                            className={widget23Item.isChecked === undefined ? "animated-checkbox" : widget23Item.isChecked ? "animated-checkbox is-checked" : "animated-checkbox is-unchecked"}>
                                             <input type="checkbox" />
                                             <div className="checkmark-wrap">
                                                 <div className={widget23Item.isChecked ? "shadow-circle is-opaque" : 'shadow-circle'}></div>
@@ -61,7 +60,7 @@ const Widget23 = memo((props: IWidget23) => {
                                             </div>
                                         </div>
                                         <div className="flex-meta is-light">
-                                            <a href="#">{widget23Item.title}</a>
+                                            <a href="/#" onClick={(e) => e.preventDefault()}>{widget23Item.title}</a>
                                             <span>at {widget23Item.timeStamp}</span>
                                         </div>
                                         <div className="flex-end">
@@ -69,7 +68,6 @@ const Widget23 = memo((props: IWidget23) => {
                                         </div>
                                     </div>)
                             }
-
                         </div>
 
                     </div>

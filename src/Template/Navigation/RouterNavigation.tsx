@@ -5,6 +5,7 @@ import {
     Route
 } from 'react-router-dom'
 import { Layout } from "../Layout";
+import { LayoutSideBar } from "../Layout/LayoutSideBar";
 import PageNotFound from "./PageNotFound";
 import ComponentPathList from "./ComponentPathList";
 
@@ -14,6 +15,7 @@ function RouterNavigation() {
     useEffect(() => {
         setPageLoad(false)
     }, [])
+
     return (
         <div className="app-wrapper">
             <div className={pageLoad ? "pageloader is-full is-active" : 'pageloader is-full'}></div>
@@ -22,7 +24,14 @@ function RouterNavigation() {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         {
-                            ComponentPathList?.map((componentPathList, index) =>
+                            ComponentPathList?.sideTopMenu.map((componentPathList, index) =>
+                                <Route key={index} element={componentPathList.component} path={componentPathList.path} />
+                            )
+                        }
+                    </Route>
+                    <Route path="/" element={<LayoutSideBar />}>
+                        {
+                            ComponentPathList?.sideMenu.map((componentPathList, index) =>
                                 <Route key={index} element={componentPathList.component} path={componentPathList.path} />
                             )
                         }

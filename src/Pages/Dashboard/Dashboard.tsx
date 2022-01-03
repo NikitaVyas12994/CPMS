@@ -31,7 +31,7 @@ const Dashboard = () => {
 
     const setWidget5DataCallback = useCallback((data) => {
         setWidget5Data(data)
-    }, [widget5Data])
+    }, [])
 
 
     const widget1TimeStamp = useMemo(() =>

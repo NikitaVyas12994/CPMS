@@ -52,7 +52,7 @@ function MobileSideMenu(props: IMobileSideMenu) {
                     </li>
                     <li>
                         <NavLink
-                            to="/Cards"
+                            to="/Graphs"
                             className={({ isActive }) =>
                                 [
 
@@ -67,7 +67,7 @@ function MobileSideMenu(props: IMobileSideMenu) {
                     </li>
                     <li>
                         <NavLink
-                            to="/Graphs"
+                            to="/Map"
                             className={({ isActive }) =>
                                 [
 
@@ -99,13 +99,12 @@ function MobileSideMenu(props: IMobileSideMenu) {
 
                 <ul className="bottom-icon-side-menu">
                     <li>
-                        <a className="right-panel-trigger" data-panel="search-panel">
-                            <i data-feather="search"></i>
-                        </a>
+                        <a href='/' onClick={(e) => e.preventDefault()} className="right-panel-trigger" data-panel="search-panel">
+                            <Icon.Search />                        </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i data-feather="settings"></i>
+                        <a href='/' onClick={(e) => e.preventDefault()}  >
+                            <Icon.Settings />
                         </a>
                     </li>
                 </ul>

@@ -17,13 +17,13 @@ const Widget15 = memo((props: IWidget15) => {
         <div className="spark-tiles">
             <div className="columns is-multiline">
                 {
-                    widget15Data.map(widget15Item => {
+                    widget15Data.map((widget15Item, index) => {
                         let chartConfig = { ...widget15ChartData };
                         chartConfig.colors = [widget15Item.color]
                         chartConfig.labels = yaxisData;
                         chartConfig.title.text = widget15Item.name;
                         chartConfig.subtitle.text = widget15Item.total
-                        return <div className="column is-3">
+                        return <div key={index} className="column is-3">
                             <div className="spark-tile">
                                 <Charts options={chartConfig} series={[{
                                     name: widget15Item.name,

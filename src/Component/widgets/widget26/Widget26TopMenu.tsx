@@ -1,11 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react'
-import * as Icon from 'react-feather';
-import { Widget4 } from "../../../Component/widgets/widget4";
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
+import { Bell } from "react-feather";
+import { Widget4 } from "../widget4";
 
-function TopMenu() {
+interface IWidget26TopMenu {
+    setIsDarkTheme: Dispatch<SetStateAction<boolean>>
+}
+
+const Widget26TopMenu = (props: IWidget26TopMenu) => {
+    const { setIsDarkTheme } = props;
+
     const [openNotificationModal, setOpenNotificationModal] = useState(false);
     const notificationModalRef = useRef<HTMLInputElement>(null);
-    const [isToggled, setIsToggled] = React.useState<boolean>(false);
+    const [isToggled, setIsToggled] = useState<boolean>(false);
 
 
     useEffect(() => {
@@ -22,25 +28,25 @@ function TopMenu() {
         if (localStorage.getItem('themeColor') === 'dark') {
             localStorage.setItem('themeColor', 'light')
             document.body.classList.remove('is-dark');
-            setIsToggled(true)
+            setIsToggled(true);
+            setIsDarkTheme(false);
         } else {
-            localStorage.setItem('themeColor', 'dark')
+            localStorage.setItem('themeColor', 'dark');
             document.body.classList.add('is-dark');
-            setIsToggled(false)
+            setIsToggled(false);
+            setIsDarkTheme(true);
         }
     }
 
     useEffect(() => {
         /**
-         * Alert if clicked on outside of element
+         * modal close on clicked outside of element
          */
         function handleClickOutside(event: any) {
             if (notificationModalRef.current && !notificationModalRef.current.contains(event.target)) {
                 setOpenNotificationModal(false)
             }
-
         }
-
         // Bind the event listener
         document.addEventListener("mousedown", handleClickOutside);
         return () => {
@@ -49,43 +55,35 @@ function TopMenu() {
         };
     }, []);
 
-
     return (
-
-        <div className="page-title has-text-centered">
-            {/* <!-- Sidebar Trigger --> */}
-            <div className="hamburger-menu nav-trigger push-resize" data-sidebar="home-sidebar">
-                <span className="menu-toggle has-chevron">
-                    <span className="icon-box-toggle">
-                        <span className="rotate">
-                            <i className="icon-line-top"></i>
-                            <i className="icon-line-center"></i>
-                            <i className="icon-line-bottom"></i>
-                        </span>
-                    </span>
-                </span>
-            </div>
-
-            <div className="title-wrap">
-                <h1 className="title is-4">Dashboard</h1>
-            </div>
-
+        <div className="content-section-header">
+            <h2 className="title is-4 is-narrow">Locations</h2>
             <div className="toolbar ml-auto">
                 <div className="toolbar-link">
                     <label className="dark-mode ml-auto">
-                        <input type="checkbox" checked={isToggled} onClick={toggle} />
+                        <input type="checkbox" checked={isToggled} onClick={() => toggle()} />
                         <span></span>
                     </label>
                 </div>
 
-                <a href='/' className="toolbar-link right-panel-trigger" data-panel="languages-panel">
-                    <img src={'assets/img/icons/flags/united-states-of-america.svg'} alt="" />
+                <a
+                    href="/#" onClick={(e) => e.preventDefault()}
+                    className="toolbar-link right-panel-trigger"
+                    data-panel="languages-panel"
+                >
+                    <img
+                        src={'assets/img/icons/flags/united-states-of-america.svg'}
+                        alt=""
+                    />
                 </a>
 
                 <div className="toolbar-notifications is-hidden-mobile">
-                    <div ref={notificationModalRef} onClick={() => setOpenNotificationModal(true)} className={openNotificationModal ? 'dropdown is-spaced is-dots is-right dropdown-trigger is-active' : "dropdown is-spaced is-dots is-right dropdown-trigger"}>
+                    <div ref={notificationModalRef} onClick={() => setOpenNotificationModal(true)}
+                        className={openNotificationModal ?
+                            'dropdown is-spaced is-dots is-right dropdown-trigger is-active' :
+                            "dropdown is-spaced is-dots is-right dropdown-trigger"}>
                         <div className="is-trigger" aria-haspopup="true">
-                            <Icon.Bell />
+                            <Bell />
                             <span className="new-indicator pulsate"></span>
                         </div>
                         <div className="dropdown-menu" role="menu">
@@ -95,7 +93,10 @@ function TopMenu() {
                                         <h6 className="heading-title">Notifications</h6>
                                     </div>
                                     <div className="heading-right">
-                                        <a className="notification-link" href="/admin-profile-notifications.html">See all</a>
+                                        <a
+                                            className="notification-link"
+                                            href="/admin-profile-notifications.html"
+                                        >See all</a>
                                     </div>
                                 </div>
                                 <Widget4 />
@@ -103,12 +104,11 @@ function TopMenu() {
                         </div>
                     </div>
                 </div>
-                <a href='/' className="toolbar-link right-panel-trigger" data-panel="activity-panel">
-                    <Icon.Grid />
-                </a>
             </div>
         </div>
     )
 }
 
-export { TopMenu };
+export {
+    Widget26TopMenu
+}

@@ -44,7 +44,7 @@ const Widget25 = memo((props: IWidget25) => {
                                 <span className={widget25Item.statusColor === 'success' ? "tag is-success is-rounded" : "tag is-rounded"}>{widget25Item.status}</span>
                             </div>
                             <div className="flex-table-cell cell-end" data-th="Actions">
-                                <a className="action-link is-pushed-mobile">Open</a>
+                                <a href="/#" onClick={(e) => e.preventDefault()} className="action-link is-pushed-mobile">Open</a>
                             </div>
                         </div>
                     )

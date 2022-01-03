@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import logo from "../../../assets/img/logos/logo/logo.svg";
-import logoLight from "../../../assets/img/logos/logo/logo-light.svg";
 import * as Icon from 'react-feather';
 import MobileSideMenu from "./MobileSideMenu";
 import MobileNavBar from "./MobileNavBar";
@@ -50,8 +48,8 @@ function SideMenu() {
             <div className="main-sidebar">
                 <div className="sidebar-brand">
                     <a href="/">
-                        <img className="light-image" src={logo} alt="" />
-                        <img className="dark-image" src={logoLight} alt="" />
+                        <img className="light-image" src={'assets/img/logos/logo/logo.svg'} alt="" />
+                        <img className="dark-image" src={'assets/img/logos/logo/logo-light.svg'} alt="" />
                     </a>
                 </div>
 
@@ -105,7 +103,7 @@ function SideMenu() {
                         </li>
                         <li>
                             <NavLink
-                                to="/Graphs"
+                                to="/Map"
                                 className={({ isActive }) =>
                                     [
 
@@ -140,14 +138,14 @@ function SideMenu() {
                     <ul className="bottom-menu">
                         {/* <!-- Notifications --> */}
                         <li className="right-panel-trigger" data-panel="search-panel">
-                            <a id="open-search" data-content="Search">
+                            <a href='/' onClick={(e) => e.preventDefault()} id="open-search" data-content="Search">
                                 <Icon.Search className="sidebar-svg"
                                     data-feather="search" />
                             </a>
                         </li>
                         {/* <!-- Wallet --> */}
                         <li>
-                            <a href="./admin-profile-settings.html" id="open-settings" data-content="Settings">
+                            <a href="/" id="open-settings" data-content="Settings">
                                 <Icon.Settings className="sidebar-svg" />
                             </a>
                         </li>

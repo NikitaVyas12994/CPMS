@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable array-callback-return */
 import React, { memo, useEffect, useState } from "react";
 import { ChartTypes } from "../../../Config/ApexChart.conf";
 import { Charts } from "../../Charts/Charts";

@@ -23,7 +23,7 @@ const Widget5 = memo((props: IWidget5) => {
         <div className="widget-card widget-padding">
             <div className="card-head">
                 <h3 className="dark-inverted">{title}</h3>
-                <a href='/' className="action-link">View All</a>
+                <a href='/' onClick={(e) => e.preventDefault()} className="action-link">View All</a>
             </div>
             <div className="active-list">
                 <div className="checkboxes-list">

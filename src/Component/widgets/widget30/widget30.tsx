@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { memo } from "react";
 import { ChartTypes } from "../../../Config/ApexChart.conf";
 import { Charts } from "../../Charts/Charts";

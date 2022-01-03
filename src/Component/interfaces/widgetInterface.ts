@@ -140,7 +140,15 @@ export interface IWidget25Data {
     status: string,
     statusColor: string
 }
-
+export interface IWidget26Data {
+    name: string,
+    logo: string,
+    distance: number,
+    openingCount: string,
+    rating: number,
+    description: string
+    coordinates: number[],
+}
 export interface IWidget27Data {
     name: string,
     data: number[]

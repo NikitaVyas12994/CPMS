@@ -30,7 +30,7 @@ const Widget6 = memo((props: IWidget6) => {
             <div id="profit-chart">
                 <div className="card-head">
                     <h3 className="dark-inverted">{title}</h3>
-                    <a href="/" className="action-link">Reportes</a>
+                    <a href="/" onClick={e => e.preventDefault()} className="action-link">Reportes</a>
                 </div>
                 <Charts options={widget6Chart} series={widget6Data} type={ChartTypes.bar} />
             </div>

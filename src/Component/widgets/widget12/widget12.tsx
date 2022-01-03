@@ -17,7 +17,7 @@ const Widget12 = memo((props: IWidget12) => {
                 <div className="dropdown-content noSelect">
                     {
                         widget12Data?.map((widget12Item, index) =>
-                            <>
+                            <span key={index}>
                                 {
                                     widget12Data.length - 1 === index && <hr className="dropdown-divider" />
                                 }
@@ -30,7 +30,7 @@ const Widget12 = memo((props: IWidget12) => {
                                         <span>{widget12Item?.subtitle}</span>
                                     </div>
                                 </a>
-                            </>
+                            </span>
                         )
                     }
                 </div>

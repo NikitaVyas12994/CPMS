@@ -1,5 +1,5 @@
 import React from 'react'
-
+import * as Icon from "react-feather";
 interface IWebsiteProfileModal {
     websiteProfileModalRef: any,
     setMyProfileWebsite: any,
@@ -36,7 +36,7 @@ function WebsiteProfileModal(props: IWebsiteProfileModal) {
                                 <span>View your profile</span>
                             </div>
                         </a>
-                        <a className="dropdown-item is-media layout-switcher">
+                        <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media layout-switcher">
                             <div className="icon">
                                 <i className="lnil lnil-layout"></i>
                             </div>
@@ -46,7 +46,7 @@ function WebsiteProfileModal(props: IWebsiteProfileModal) {
                             </div>
                         </a>
                         <hr className="dropdown-divider" />
-                        <a href="#" className="dropdown-item is-media">
+                        <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media">
                             <div className="icon">
                                 <i className="lnil lnil-briefcase"></i>
                             </div>
@@ -55,7 +55,7 @@ function WebsiteProfileModal(props: IWebsiteProfileModal) {
                                 <span>All my projects</span>
                             </div>
                         </a>
-                        <a href="#" className="dropdown-item is-media">
+                        <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media">
                             <div className="icon">
                                 <i className="lnil lnil-users-alt"></i>
                             </div>
@@ -65,7 +65,7 @@ function WebsiteProfileModal(props: IWebsiteProfileModal) {
                             </div>
                         </a>
                         <hr className="dropdown-divider" />
-                        <a href="#" className="dropdown-item is-media">
+                        <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media">
                             <div className="icon">
                                 <i className="lnil lnil-cog"></i>
                             </div>
@@ -78,7 +78,7 @@ function WebsiteProfileModal(props: IWebsiteProfileModal) {
                         <div className="dropdown-item is-button">
                             <button className="button h-button is-primary is-raised is-fullwidth logout-button">
                                 <span className="icon is-small">
-                                    <i data-feather="log-out"></i>
+                                    <Icon.LogOut />
                                 </span>
                                 <span>Logout</span>
                             </button>

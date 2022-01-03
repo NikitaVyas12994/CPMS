@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { memo } from "react";
 import { Charts } from "../../Charts/Charts";
 import "./widget8.css";

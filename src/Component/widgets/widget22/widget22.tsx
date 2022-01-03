@@ -14,17 +14,17 @@ const Widget22 = memo((props: IWidget22) => {
 
     const clickItem = (changeKey: string, radioButtonItem: IWidget22Data) => {
         const copyData = { ...widget22Data };
-        copyData[changeKey].map((copyItem: IWidget22Data) => {
+        copyData[changeKey].map((copyItem: IWidget22Data) =>
             copyItem.id === radioButtonItem.id ?
                 copyItem.isChecked = true :
                 copyItem.isChecked = false
-        })
+        )
         setWidget22Data({ ...copyData })
     }
 
     return (
         <div className="widget-card filters-card">
-            <a href='/' className="button h-button is-primary is-fullwidth is-bold is-raised">Add To Favorites</a>
+            <a href='/' onClick={(e) => e.preventDefault()} className="button h-button is-primary is-fullwidth is-bold is-raised">Add To Favorites</a>
             {
                 Object.entries(widget22Data)?.map(([widget22ItemKey, widget22ItemValue], index) =>
                     <div key={index} className="checkboxes-list">
@@ -36,11 +36,7 @@ const Widget22 = memo((props: IWidget22) => {
                                         <label
                                             className="checkbox"
                                             onClick={() => clickItem(widget22ItemKey, radioButtonItem)}>
-                                            {
-                                                radioButtonItem?.isChecked ?
-                                                    <input type="radio" name={widget22ItemKey} value={radioButtonItem.title} checked /> :
-                                                    <input type="radio" name={widget22ItemKey} value={radioButtonItem.title} />
-                                            }
+                                            <input type="radio" name={widget22ItemKey} value={radioButtonItem.title} checked={radioButtonItem?.isChecked} />
                                             <span></span>
                                             {radioButtonItem.title}
                                         </label>

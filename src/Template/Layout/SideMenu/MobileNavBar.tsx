@@ -1,7 +1,5 @@
 import React from 'react'
 import * as Icon from 'react-feather';
-import logo from "../../../assets/img/logos/logo/logo.svg";
-import logoLight from "../../../assets/img/logos/logo/logo-light.svg";
 import { Widget4 } from "../../../Component/widgets/widget4";
 
 interface IMobileNavBar {
@@ -36,13 +34,13 @@ function MobileNavBar(props: IMobileNavBar) {
                     </div>
 
                     <a className="navbar-item is-brand" href="index.html">
-                        <img className="light-image" src={logo} alt="" />
-                        <img className="dark-image" src={logoLight} alt="" />
+                        <img className="light-image" src={'assets/img/logos/logo/logo.svg'} alt="" />
+                        <img className="dark-image" src={'assets/img/logos/logo/logo-light.svg'} alt="" />
                     </a>
 
                     <div className="brand-end">
                         <div className="navbar-item has-dropdown is-notification is-hidden-tablet is-hidden-desktop">
-                            <a className="navbar-link is-arrowless" >
+                            <a href='/' onClick={(e) => e.preventDefault()} className="navbar-link is-arrowless" >
                                 <Icon.Bell />
                                 <span className="new-indicator pulsate"></span>
                             </a>
@@ -52,7 +50,7 @@ function MobileNavBar(props: IMobileNavBar) {
                                         <h6 className="heading-title">Notifications</h6>
                                     </div>
                                     <div className="heading-right">
-                                        <a className="notification-link" href="#">See all</a>
+                                        <a href='/' onClick={(e) => e.preventDefault()} className="notification-link" >See all</a>
                                     </div>
                                 </div>
                                 <div className="inner has-slimscroll">
@@ -77,7 +75,7 @@ function MobileNavBar(props: IMobileNavBar) {
                                             <span>Product Manager</span>
                                         </div>
                                     </div>
-                                    <a href="" className="dropdown-item is-media">
+                                    <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media">
                                         <div className="icon">
                                             <i className="lnil lnil-user-alt"></i>
                                         </div>
@@ -86,7 +84,7 @@ function MobileNavBar(props: IMobileNavBar) {
                                             <span>View your profile</span>
                                         </div>
                                     </a>
-                                    <a className="dropdown-item is-media layout-switcher">
+                                    <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media layout-switcher">
                                         <div className="icon">
                                             <i className="lnil lnil-layout"></i>
                                         </div>
@@ -96,7 +94,7 @@ function MobileNavBar(props: IMobileNavBar) {
                                         </div>
                                     </a>
                                     <hr className="dropdown-divider" />
-                                    <a href="#" className="dropdown-item is-media">
+                                    <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media">
                                         <div className="icon">
                                             <i className="lnil lnil-briefcase"></i>
                                         </div>
@@ -105,7 +103,7 @@ function MobileNavBar(props: IMobileNavBar) {
                                             <span>All my projects</span>
                                         </div>
                                     </a>
-                                    <a href="#" className="dropdown-item is-media">
+                                    <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media">
                                         <div className="icon">
                                             <i className="lnil lnil-users-alt"></i>
                                         </div>
@@ -115,7 +113,7 @@ function MobileNavBar(props: IMobileNavBar) {
                                         </div>
                                     </a>
                                     <hr className="dropdown-divider" />
-                                    <a href="#" className="dropdown-item is-media">
+                                    <a href='/' onClick={(e) => e.preventDefault()} className="dropdown-item is-media">
                                         <div className="icon">
                                             <i className="lnil lnil-cog"></i>
                                         </div>
@@ -128,7 +126,7 @@ function MobileNavBar(props: IMobileNavBar) {
                                     <div className="dropdown-item is-button">
                                         <button className="button h-button is-primary is-raised is-fullwidth logout-button">
                                             <span className="icon is-small">
-                                                <i data-feather="log-out"></i>
+                                                <Icon.LogOut />
                                             </span>
                                             <span>Logout</span>
                                         </button>

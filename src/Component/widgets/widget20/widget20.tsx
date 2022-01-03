@@ -43,7 +43,7 @@ const Widget20 = memo((props: IWidget20) => {
             <div className="inner-box">
                 <div className="box-title">
                     <h3>Transactions</h3>
-                    <a className="action-link">View All</a>
+                    <a href="/#" onClick={(e) => e.preventDefault()} className="action-link">View All</a>
                 </div>
                 {/* <!--Transactions--> */}
                 <div className="transactions">
@@ -89,7 +89,7 @@ const Widget20 = memo((props: IWidget20) => {
                             {/* <!--Chart--> */}
                             <div className="column is-8">
                                 <div className="chart-wrapper">
-                                    <a className="action-link">All Reports</a>
+                                    <a href="/#" onClick={(e) => e.preventDefault()} className="action-link">All Reports</a>
                                     <div id="timeline-chart">
                                         <Charts options={widget20ChartConfig} series={widget20ChartData} type={ChartTypes.area} />
                                     </div>
